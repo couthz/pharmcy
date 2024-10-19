@@ -1,0 +1,136 @@
+@baseFontSize: 75;
+.rem(@name,@px) {
+  @{name}: unit(@px / @baseFontSize, rem);
+}
+
+.text-align__right {
+  text-align: right;
+}
+.item-noborder{
+  width: 100%;
+  height: 100%;
+  border-width: 1;
+}
+/*清除浮动*/
+.clearfloat:after{
+  display:block;
+  clear:both;
+  content:"";
+  visibility:hidden;
+  height:0
+}
+
+/** remind **/
+.remind-page-bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background:#6A9DD3;
+}
+//有边框有左右padding
+.remind-form-item__border{
+  .rem(height,65);
+  .rem(line-height,65);
+  width: 100%;
+  border: 1px solid #DDDDDD;
+  .rem(border-radius,10);
+  padding: 0 10px;
+  box-sizing: border-box;
+  color:#21CCD0;
+}
+//无边框有左右padding
+.remind-form-item__noborder{
+  .rem(height,65);
+  .rem(line-height,65);
+  width: 100%;
+  .rem(border-radius,10);
+  padding: 0 10px;
+  box-sizing: border-box;
+  color:#21CCD0;
+}
+//无边框有左padding
+.remind-form-item__nborder__lpadding{
+  .rem(height,65);
+  .rem(line-height,65);
+  width: 100%;
+  .rem(border-radius,10);
+  padding: 0 0 0 10px;
+  box-sizing: border-box;
+  color:#21CCD0;
+}
+//无边框无padding
+.remind-form-item__nborder__npadding{
+  .rem(height,65);
+  .rem(line-height,65);
+  width: 100%;
+  .rem(border-radius,10);
+  padding: 0;
+  box-sizing: border-box;
+  color:#21CCD0;
+}
+.remind-from-btn{
+  display: block;
+  .rem(width,600);
+  .rem(height,100);
+  .rem(line-height,100);
+  text-align: center;
+  background-color:rgba(1,210,216,1);
+  margin: auto;
+  border-radius: 40px;
+  font-family:MicrosoftYaHeiLight;
+  font-weight:300;
+  color:rgba(255,255,255,1);
+}
+.remind-picker-item{
+  .rem(height,65);
+  .rem(line-height,65);
+  width: 100%;
+  border: 1px solid #DDDDDD;
+  .rem(border-radius,10);
+  padding: 0 10px;
+  box-sizing: border-box;
+  color:#21CCD0;
+
+  &:after{
+    position: relative;
+    .rem(top,20);
+    content: '';
+    float: right;
+    height: 0;
+    width: 0;
+    border-top: solid #09ECF2;
+    border-right: solid transparent;
+    border-bottom: 0;
+    border-left: solid transparent;
+    margin-left: 0 10px;
+    .rem(border-top-width,30);
+    .rem(border-left-width,15);
+    .rem(border-right-width,15);
+  }
+}
+.weui-switch:checked{
+  background: #01D2D8;
+  border-color:#01D2D8
+}
+
+/*微信分享*/
+.wx_share_text{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+
+  img{
+    position: fixed;
+    right: 18px;
+    top: 5px;
+    width: 260px;
+    z-index: 999;
+  }
+}
