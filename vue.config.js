@@ -9,7 +9,7 @@ module.exports = {
     disableHostCheck: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:8082',
+        target: 'https://pharmcyapi.couthz.com',
         changeOrigin: true,
         pathRewrite: {
           '^/api': '/api'
